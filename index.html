@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="http://code.highcharts.com/highcharts-more.js"></script>
+    <script src="http://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.3.5/tabletop.min.js"></script>
+    <script>
+
+        $(function () {
+
+            var data = [{
+                name: 'Japan',
+                data: [9, 0, 3, 9, 0]
+            }, {
+                name: 'Taiwan',
+                data: [0, 9, 0, 2, 8]
+            },{
+                name: 'California',
+                data: [4, 5, 6, 7, 8]
+            }
+          ];
+
+            $('#container').highcharts({
+                chart: {
+                    type: 'bar'
+                },
+                title: {
+                    text: 'Rim of Fire Earthquake Activity'
+                },
+                xAxis: {
+                    categories: ["~1960","1970","1980","1990", "2000~"]
+                },
+                yAxis: {
+                    title: {
+                        text: 'Earthquake Magnitude Scale'
+                    }
+                },
+                series: data
+            });
+        });
+
+
+
+
+    </script>
+  </head>
+  <body>
+    <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+    <img src="http://caliearthquakes1.pbworks.com/f/1229103999/ringoffire.gif"/>
+  </body>
+</html>
